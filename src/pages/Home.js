@@ -1,9 +1,32 @@
 import React from "react";
-import { ButtonToolbar } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 //css-in-js
 import styled, { css } from "styled-components";
 import VeganImg from "../assets/vegan.png";
+
+const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClickButton = () => {
+    // useNavigate
+    navigate("/question");
+  };
+  return (
+    <Wrapper>
+      <Header>Vegan Level Test</Header>
+      <Contents>
+        <Title>나의 비건 레벨은?</Title>
+        <LogoImage>
+          <img src={VeganImg} width={250} height={250}></img>
+        </LogoImage>
+        <Btn onClick={handleClickButton}>테스트 시작하기</Btn>
+      </Contents>
+    </Wrapper>
+  );
+};
+
+export default Home;
 
 const Wrapper = styled.div`
   background-color: #eaf5d5;
@@ -58,20 +81,3 @@ const Btn = styled.button`
     transition: 0.5s;
   }
 `;
-
-const Home = () => {
-  return (
-    <Wrapper>
-      <Header>Vegan Level Test</Header>
-      <Contents>
-        <Title>나의 비건 레벨은?</Title>
-        <LogoImage>
-          <img src={VeganImg} width={250} height={250}></img>
-        </LogoImage>
-        <Btn>테스트 시작하기</Btn>
-      </Contents>
-    </Wrapper>
-  );
-};
-
-export default Home;
