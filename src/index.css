@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "googleJua";
+  src: url(./assets/fonts/Jua\,Nanum_Gothic/Jua/Jua-Regular.ttf);
+}
+
+@font-face {
+  font-family: "googleNanumgothic";
+  src: url(./assets/fonts/Jua\,Nanum_Gothic/Nanum_Gothic/NanumGothic-Regular.ttf);
+}
+
+:root{
+  --font-googleJua: "googleJua";
+  --font-googleNanumgothic:"googleNanumgothic";
+}
