@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 //css-in-js
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import VeganImg from "../assets/vegan.png";
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
     <Wrapper>
       <Header>Vegan Level Test</Header>
       <Contents>
-        <Title>나의 비건 레벨은?</Title>
+        <Title>나의 채식 유형은?</Title>
         <LogoImage>
           <img src={VeganImg} width={250} height={250}></img>
         </LogoImage>
